@@ -12,7 +12,7 @@ const cors = require('cors');
 const ENV = "dev";
 
 const CONFIG = {
-  PORT: 4334
+  PORT: process.env.PORT || 4334
 }
 
 var obj = {
