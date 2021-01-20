@@ -9,10 +9,8 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 const cors = require('cors');
 
-const ENV = "dev";
-
 const CONFIG = {
-  PORT: process.env.PORT || 4334
+  PORT: process.env.PORT || 8080
 }
 
 var obj = {
