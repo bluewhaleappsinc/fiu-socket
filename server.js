@@ -54,7 +54,7 @@ server.listen(CONFIG.PORT, () => {
   console.log('Server is running at port: ' + CONFIG.PORT);
 });
 
-// io.set('origins', "*:*");
+io.set('origins', "*:*");
 
 io.on('connection', socket => {
   console.log("Connection  :: ", socket.id);
