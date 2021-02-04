@@ -64,6 +64,7 @@ io.on('connection', socket => {
   
   console.log("In coming participant_id", participant_id);
   console.log("Connection  :: ", socket.id);
+  console.log("Connection Date  :: ", new Date().toTimeString());
 
   socket.emit('connectSuccess', { content: 'You have connected.' });
 
@@ -71,6 +72,7 @@ io.on('connection', socket => {
     console.log("In Coming Data :: ");
     console.log(data);
     console.log("my data participant id :: ", data.participant_id);
+    console.log("Data received Date  :: ", new Date().toTimeString());
 
     io.to(data.participant_id).emit('triggered',data);
   });
